@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dustinpfister/jskey-walk/issues"
   },
-  "homepage": "https://github.com/dustinpfister/jskey-walk#readme"
+  "homepage": "https://github.com/dustinpfister/jskey-walk#readme",
+  "dependencies": {
+    "yargs": "^13.3.0"
+  }
 }
