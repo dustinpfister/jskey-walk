@@ -7,11 +7,18 @@ exports.builder = {
     // default to current working dir
     t: {
       default: process.cwd()
+    },
+    // recursive
+    r: {
+      default: false
     }
 };
 exports.handler = function (argv) {
     console.log('jskey-walk: walking target: ' );
     console.log(argv.t);
     
-    require('../lib/walk-basic/index.js')({dir: argv.t});
+    require('../lib/walk-basic/index.js')({
+        dir: argv.t,
+        recursive: argv.r
+    });
 };
