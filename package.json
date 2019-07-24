@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Custom file system walker for jskey",
   "main": "index.js",
+  "bin":{
+    "jskey-walk": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
