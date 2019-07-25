@@ -11,6 +11,12 @@ exports.builder = {
     // recursive
     r: {
       default: false
+    },
+    // path to a script that contains
+    // a for file method to fire for
+    // each file
+    s: {
+      default: false
     }
 };
 exports.handler = function (argv) {
@@ -19,6 +25,7 @@ exports.handler = function (argv) {
     
     require('../lib/walk-basic/index.js')({
         dir: argv.t,
-        recursive: argv.r
+        recursive: argv.r,
+        scriptPath : argv.s
     });
 };
