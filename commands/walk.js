@@ -20,8 +20,8 @@ exports.builder = {
     }
 };
 exports.handler = function (argv) {
-    console.log('jskey-walk: walking target: ' );
-    console.log(argv.t);
+    //console.log('jskey-walk: walking target: ' );
+    //console.log(argv.t);
     
     require('../lib/walk-basic/index.js')({
         dir: argv.t,
