@@ -1,6 +1,6 @@
 module.exports = {
-    //forFile : function(item, next){
-    //    console.log(item.fileName);
-    //    next();
-    //}
+    forFile : function(item, next){
+        console.log('***' + item.fileName);
+        next();
+    }
 };
