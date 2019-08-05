@@ -9,7 +9,7 @@
   * (done) dir property of a forFile Object can be used in place of the t option when using the walk command
   * (done) The forFile Object can have a forFile method of course
   * (done) The forFile Object can have an onDone method
-  * The forFile Object can have a beforeWalk method that will fire before walking begins
+  * (done) The forFile Object can have a beforeWalk method that will fire before walking begins
 
 
 ## 0.0.15 - Alpha I - first release
