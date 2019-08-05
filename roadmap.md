@@ -1,9 +1,15 @@
 ## 1.0.x - jskey-crypt
   * Added Built in forFile methods that can make use of jskey-crypt if available
-  * A forFile method now has access to options that are given from the command line
   * Can create an encrypted folder from an unencrypted one and the reverse as well via new crypt command
   
-## 0.1.16 - Alpha II - Plan Object format for forFile script
+## 0.2.x - Alpha III - Option Object access and path control
+  * A forFile method now has access to the options object
+  * path relative option for walk command and for file scripts that can be used to set where a dir option should be relative from. 
+  * path relative option is current working dir if no dir property is given
+  * path relative option is for file script relative if dir prop is given
+  * path relative option should always be an absolute path.
+  
+## 0.1.16 - Alpha II - Plain Object format for forFile script
   * (done) fixed a bug when steping file index
   * (done) a forFile script can just be a plan old object
   * (done) dir property of a forFile Object can be used in place of the t option when using the walk command
