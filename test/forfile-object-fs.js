@@ -9,12 +9,10 @@ module.exports = {
     },
     forFile : function(item, next){
         if(item.fileName.match(/.js$/)){
-            //console.log(item.path);
-            fs.readFile(item.path, 'hex', function(e, data){
-              
+            console.log(item.path);
+            fs.readFile(item.path, 'utf8', function(e, data){
                 console.log(data)
                 next();
-                
             })
         }else{
           next();
