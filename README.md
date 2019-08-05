@@ -23,14 +23,18 @@ $ jskey-walk walk -t foo
 
 When it comes to really using jskey-walk an external for file method should be given to it. This method will contain logic that is to be prefromed for each file found.
 
-## Create a custom for file method
+## Create a custom for file script for walk command
+
+The jskey-walk walk command is not so great by itself. However a forFile script can be given bia the s option. This exteral script can just export a method or an object.
+
+### A forFile method
 
 To create a custom for file method have an exteral javaScript file that exports a single method. That method will be given a reference to each item as the first argument, and a function that can be called to continue on to the next item as the second argument.
 
 Do whatever needs to be done for each file in this method, being sure to call next when that something is done.
 
 ```js
-module.exports = (item, next ) => {
+module.exports = (item, next) => {
     console.log('this is just a test of the forfile script feature.');
     console.log('file found at: ' + item.path);
     console.log('**********');
@@ -38,7 +42,42 @@ module.exports = (item, next ) => {
 };
 ```
 
+The method can then be used by using the -s option
+
 ```
 $ jskey-walk -t ./foo -s ./for-foo.js
-(paths of files found in foo)
+```
+
+### A forFile object
+
+A For file Script can also be in object form
+
+```js
+let fs = require('fs');
+module.exports = {
+    dir: './',
+    recursive: true,
+    beforeWalk: function(next){
+        console.log('going to walk now');
+        console.log('**********');
+        next();
+    },
+    forFile : function(item, next){
+        if(item.fileName.match(/.js$/)){
+            //console.log(item.path);
+            fs.readFile(item.path, 'hex', function(e, data){
+              
+                console.log(data)
+                next();
+                
+            })
+        }else{
+          next();
+        }
+    },
+    onDone : function(){
+        console.log('**********');
+        console.log('we are done now');
+    }
+};
 ```

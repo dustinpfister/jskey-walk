@@ -11,7 +11,6 @@
   * (done) The forFile Object can have an onDone method
   * (done) The forFile Object can have a beforeWalk method that will fire before walking begins
 
-
 ## 0.0.15 - Alpha I - first release
 
   * (done) Can be installed globaly
