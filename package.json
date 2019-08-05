@@ -1,6 +1,6 @@
 {
   "name": "jskey-walk",
-  "version": "0.0.15",
+  "version": "0.1.16",
   "description": "Custom file system walker for jskey",
   "main": "index.js",
   "bin":{
