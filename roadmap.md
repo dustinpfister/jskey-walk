@@ -5,11 +5,12 @@
   
 ## 0.1.x - Alpha II - Plan Object format for forFile script
   * (done) fixed a bug when steping file index
-  * a forFile script can just be a plan old object
-  * The forFile Object can have a forFile method of course
+  * (done) a forFile script can just be a plan old object
+  * (done) dir property of a forFile Object can be used in place of the t option when using the walk command
+  * (done) The forFile Object can have a forFile method of course
   * The forFile Object can have an onDone method
   * The forFile Object can have a beforeWalk method that will fire before walking begins
-  * targetPath property for forFile Object that can be used in place of the t option when using the walk command
+
 
 ## 0.0.15 - Alpha I - first release
 
